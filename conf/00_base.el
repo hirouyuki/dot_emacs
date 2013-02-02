@@ -26,3 +26,6 @@
 (require 'ucs-normalize)
 (setq file-name-coding-system 'utf-8)
 (setq locale-coding-system 'utf-8)
+
+;; 起動時から global-auto-revert-mode を有効にする
+(global-auto-revert-mode 1)
