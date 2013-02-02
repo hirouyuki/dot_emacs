@@ -8,7 +8,7 @@
             (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; elisp と conf ディレクトリをサブディレクトリごと load-path に追加
-(add-to-load-path "elisp" "conf")
+(add-to-load-path "elisp")
 
 ;; init-loader
 (require 'init-loader)
