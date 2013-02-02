@@ -61,13 +61,6 @@
     nil 'japanese-jisx0208
     (font-spec :family "Hiragino Maru Gothic Pro")))
 
-;; C-t でother-window、分割されてなかったら分割
-(defun other-window-or-split () ; http://d.hatena.ne.jp/rubikitch/20100210/emacs
-  (interactive)
-  (when (one-window-p)
-    (split-window-horizontally))
-  (other-window 1))
-(define-key global-map (kbd "C-t") 'other-window-or-split)
 
 ;; uniquify 同一ファイル名のバッファ名をわかりやすく
 (require 'uniquify)
