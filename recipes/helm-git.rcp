@@ -1,0 +1,5 @@
+(:name helm-git
+       :description "find git proj file for Emacs."
+       :type github
+       :pkgname "maio/helm-git"
+)
