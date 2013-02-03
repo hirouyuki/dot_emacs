@@ -1,0 +1,14 @@
+(:name flycheck
+       :description "for flycheck."
+       :type github
+       :pkgname "lunaryorn/flycheck"
+       :post-init (progn
+        (add-hook 'python-mode-hook 'flycheck-mode)
+        (add-hook 'ruby-mode-hook 'flycheck-mode)
+        (add-hook 'haml-mode-hook 'flycheck-mode)
+        (add-hook 'html-mode-hook 'flycheck-mode)
+        (add-hook 'js-mode-hook 'flycheck-mode)
+        (add-hook 'json-mode-hook 'flycheck-mode)
+        (add-hook 'php-mode-hook 'flycheck-mode)
+        (add-hook 'css-mode-hook 'flycheck-mode)
+        ))
