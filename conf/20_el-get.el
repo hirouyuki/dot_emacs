@@ -24,6 +24,7 @@
       direx
       magit
       markdown-mode
+      haml-mode
     ))
 
 
