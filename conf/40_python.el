@@ -5,7 +5,7 @@
             (define-key python-mode-map "(" 'electric-pair)
             (define-key python-mode-map "[" 'electric-pair)
             (define-key python-mode-map "{" 'electric-pair)
-            (define-key python-mode-map "\C-m" 'newline-and-indent)
+            ;;(define-key python-mode-map "\C-m" 'newline-and-indent)
             ))
 (defun electric-pair ()
   "Insert character pair without sournding spaces"
