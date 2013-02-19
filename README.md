@@ -1,2 +1,2 @@
-# My Dot Emacs Project
+# My Dot Emacs
 
