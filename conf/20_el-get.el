@@ -25,6 +25,7 @@
       magit
       markdown-mode
       haml-mode
+      js2-mode
     ))
 
 
