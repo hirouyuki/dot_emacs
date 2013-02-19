@@ -1,6 +1,7 @@
 ;; テーマ読み込み
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes/"))
-(load-theme 'me t)
+;;(load-theme 'me t)
+(load-theme 'tomorrow-night-bright t)
 
 ;; スタートアップメッセージを非表示
 (setq inhibit-startup-screen t)

@@ -1,8 +1,8 @@
-;;; tomorrow-night-theme からコピペ＆改変
+;;; tomorrow-night-bright-theme.el --- custom theme for faces
 
 ;;; Commentary:
 ;;
-;;; Tomorrow Night Theme
+;;; Tomorrow Night Bright Theme
 ;;
 ;; Originally by Chris Kempson https://github.com/ChrisKempson/Tomorrow-Theme
 ;; Ported to GNU Emacs by Chris Charles
@@ -10,32 +10,32 @@
 
 ;;; Code:
 
-(deftheme me
+(deftheme tomorrow-night-bright
   "A Pastel Coloured Theme")
 
-(let ((background "#232728")
-      (current-line "#282a2e")
-      (selection "#373b41")
-      (foreground "#d2d2d2")
+(let ((background "#000000")
+      (current-line "#2a2a2a")
+      (selection "#424242")
+      (foreground "#eaeaea")
       (comment "#969896")
-      (cursor "#aeafad")
-      (red "#ff017e")
-      (orange "#ff017e")
-      (yellow "#fff269")
-      (green "#82c600")
-      (aqua "#60aae7")
-      (blue "#006fdc")
-      (purple "#ac59ff"))
+      (cursor "#9f9f9f")
+      (red "#d54e53")
+      (orange "#e78c45")
+      (yellow "#e7c547")
+      (green "#b9ca4a")
+      (aqua "#70c0b1")
+      (blue "#7aa6da")
+      (purple "#c397d8"))
 
   (custom-theme-set-faces
-   'me
+   'tomorrow-night-bright
 
    ;; Built-in stuff (Emacs 23)
    `(default ((t (:background ,background :foreground ,foreground))))
    `(error ((t (:foreground ,red))))
    `(escape-glyph ((t (:foreground ,aqua))))
    `(fringe ((t (:background ,current-line))))
-   `(highlight ((t (:background ,green :foreground ,current-line))))
+   `(highlight ((t (:background ,current-line))))
    `(link ((t (:foreground ,blue))))
    `(link-visited ((t (:foreground ,purple))))
    `(minibuffer-prompt ((t (:foreground ,blue))))
@@ -114,10 +114,30 @@
    `(font-latex-sedate-face ((t (:foreground ,aqua))))
    `(font-latex-string-face ((t (:foreground ,yellow))))
    `(font-latex-verbatim-face ((t (:foreground ,orange))))
-   `(font-latex-warning-face ((t (:foreground ,red)))))
+   `(font-latex-warning-face ((t (:foreground ,red))))
+
+   ;; ido-mode
+   `(ido-first-match ((t (:foreground ,orange :weight bold))))
+   `(ido-only-match ((t (:foreground ,red :weight bold))))
+   `(ido-subdir ((t (:foreground ,comment))))
+
+   ;; diff-mode
+   `(diff-added ((t (:foreground ,green))))
+   `(diff-changed ((t (:foreground ,yellow))))
+   `(diff-removed ((t (:foreground ,red))))
+   `(diff-header ((t (:background ,current-line))))
+   `(diff-file-header ((t (:background ,selection))))
+   `(diff-hunk-header ((t (:background ,current-line :foreground ,blue))))
+
+   ;; magit-mode
+   `(magit-section-title ((t (:inherit diff-hunk-header))))
+   `(magit-log-graph ((t (:foreground ,comment))))
+   `(magit-log-sha1 ((t (:foreground ,purple))))
+   `(magit-log-head-label-local ((t (:foreground ,blue))))
+   `(magit-log-head-label-remote ((t (:foreground ,green)))))
 
   (custom-theme-set-variables
-   'me
+   'tomorrow-night-bright
 
    `(ansi-color-names-vector
      ;; black, red, green, yellow, blue, magenta, cyan, white
@@ -126,6 +146,6 @@
      ;; black, red, green, yellow, blue, magenta, cyan, white
      [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,foreground])))
 
-(provide-theme 'me)
+(provide-theme 'tomorrow-night-bright)
 
-;;; tomorrow-night-theme.el ends here
+;;; tomorrow-night-bright-theme.el ends here
